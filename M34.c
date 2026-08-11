@@ -20,7 +20,8 @@ int main(){
     }
     char ans[100] = "";
     int m=0;
-    for(i=0;i<a[0].length;i++){
+    for(i=0;a[0][i] != '\0';i++){
+        f=0;
         for(j=1;j<n;j++){
            if(a[0][i] == a[j][i] ){
                 if(j == n-1){
@@ -33,9 +34,14 @@ int main(){
         }
         if(f==1){
             ans[m]=a[0][i];
+            m++;
         }else{
             break;
         }
+    }
+    if(m==0){
+        printf("\"\" ");
+        return 0;
     }
     printf("%s",ans);
     return 0;

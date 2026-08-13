@@ -15,20 +15,32 @@ int main(){
 
     s = (h * 3600) + (m * 60) + s;
 
-    char ch;
-    printf("Enter add (+) and sub(-) :");
-    scanf("%c\n",&ch);
-   
-    int sec;
-    printf("Enter add or sub seconds : ");
-    scanf("%d\n",&sec);
+    int s1;
+    printf("Enter add seconds : ");
+    scanf("%d",&s1);
 
-    if(ch == '+'){
-        s = s + sec;
-    }
-    if(ch == '-'){
-        s = s - sec;
-    }
-    printf("%d",sec);
+    s = s + s1;
+
+    int sec,min,hour;
+    hour = s / 3600;
+    int min1 = s % 3600;
+    min = min1 / 60;
+    sec = min1 % 60;
+    
+
+    int s2;
+    printf("Enter Subtract seconds : ");
+    scanf("%d",&s2);
+
+    s = s - s2;
+
+    int sec1,min2,hour1;
+    hour1 = s / 3600;
+    int min3 = s % 3600;
+    min2 = min3 / 60;
+    sec1 = min3 % 60;
+
+    printf("%.2d:%.2d:%.2d\n",hour,min,sec);
+    printf("%.2d:%.2d:%.2d",hour1,min2,sec1);
     return 0;
 }

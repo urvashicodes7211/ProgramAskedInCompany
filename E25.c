@@ -23,9 +23,11 @@ int main(){
     }
     int a1,a2;
     for(int i=0;i<n;i++){
-        if(a[i] + a[i+1] == target){
-            a1 = i;
-            a2 = i+1;
+        for(int j=i+1;j<n;j++){
+            if(a[i] + a[j] == target){
+                a1 = i;
+                a2 = j;
+            }
         }
     }
     printf("%d,%d",a1,a2);

@@ -15,14 +15,8 @@ int main(){
     }
     int sum = 0 , result = 0;
     for(i=0;i<n;i++){
-        for(j=0;j<n;j++){
-            if(i==j){
-                sum = sum + a[i][j];
-            }
-            if(i+j == n-1){
-                result = result + a[i][j];
-            }
-        }
+        sum = sum + a[i][i];
+        result = result + a[i][n-i-1];
     }
     printf("Principal Diagonal : %d\n",sum);
     printf("Secondary Diagonal : %d",result);

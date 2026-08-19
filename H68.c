@@ -1,3 +1,6 @@
+/*Write a program to find the total number of contiguous subarrays in a given integer array whose sum is 
+equal to k. 
+A subarray is a contiguous sequence of elements within an array.*/
 #include<stdio.h>
 int main(){
     int n,ans = 0;
